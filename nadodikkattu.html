@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malayalam Movie Subs</title>
     <style>
+        .share-buttons {
+                margin-top: 20px;
+                text-align: center;
+            }
+            .share-buttons a {
+                margin: 0 10px;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+                font-size: 16px;
+        }
         /* Global font style */
         body {
             font-family: 'Helvetica', Arial, sans-serif;
@@ -101,13 +113,6 @@
             background-color: #0056b3;
         }
 
-        /* Counter styling */
-        .download-counter {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-
         /* Social media links */
         .social-links {
             margin-top: 20px;
@@ -157,11 +162,6 @@
             Download Subtitles
         </a>
 
-        <!-- Download Counter -->
-        <div class="download-counter">
-            <span id="downloadCount">0</span> Downloads
-        </div>
-
         <!-- Social Media Links -->
         <div class="social-links">
             <!-- IMDB -->
@@ -177,19 +177,30 @@
         </div>
     </div>
 </div>
+<div class="share-buttons">
+    <a href="https://twitter.com/intent/tweet?text=Nadodikkattu%20English%20Subtitles%20Download%20at%20[URL]" target="_blank">
+        <img src="https://seeklogo.com/images/T/twitter-icon-square-logo-108D17D373-seeklogo.com.png" alt="Twitter" style="width: 40px; height: 40px; margin: 5px;">
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=[URL]" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook" style="width: 40px; height: 40px; margin: 5px;">
+    </a>
+    <a href="https://wa.me/?text=Nadodikkattu%20English%20Subtitles%20Download%20at%20[URL]" target="_blank">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu-square-flat-social/60/whatsapp-square-social-media-512.png" alt="WhatsApp" style="width: 40px; height: 40px; margin: 5px;">
+    </a>
+    <a href="https://www.reddit.com/submit?url=[URL]&title=Nadodikkattu+English+Subtitles!" target="_blank">
+        <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square1-512.png" alt="Reddit" style="width: 40px; height: 40px; margin: 5px;">
+    </a>
+</div>
+</div>
 
 <script>
-    // Initialize counter from local storage or default to 0
-    let downloadCount = localStorage.getItem('downloadCount') ? parseInt(localStorage.getItem('downloadCount')) : 0;
+    // Replace [URL] with the actual URL of your page dynamically
+    const url = window.location.href; // Get current page URL
+    const links = document.querySelectorAll('.share-buttons a');
 
-    // Display the current download count on the page
-    document.getElementById('downloadCount').innerText = downloadCount;
-
-    // Handle the download button click event
-    document.getElementById('downloadButton').addEventListener('click', function() {
-        downloadCount++; // Increment the counter
-        localStorage.setItem('downloadCount', downloadCount); // Save the new count in localStorage
-        document.getElementById('downloadCount').innerText = downloadCount; // Update the display
+    // Update each link with the current page URL
+    links.forEach(link => {
+        link.href = link.href.replace('[URL]', encodeURIComponent(url));
     });
 </script>
 
