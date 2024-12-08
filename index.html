@@ -1,17 +1,123 @@
-<div style="display: flex;flex-wrap: wrap;justify-content: center;gap: 10px">
-    <a href="https://rb.gy/uayiqg" target="_blank" style="flex: 1 1 calc(20% - 10px);max-width: calc(20% - 10px);text-align: center">
-        <img src="https://image.tmdb.org/t/p/original/ePuAtxBT6DDMHmk6eusFpIWi64A.jpg" alt="Image 1" style="width: 100%;height: auto;border-radius: 5px">
-    </a>
-    <a href="https://rb.gy/vtc1yd" target="_blank" style="flex: 1 1 calc(20% - 10px);max-width: calc(20% - 10px);text-align: center">
-        <img src="https://i.ibb.co/9NvBJ9P/thumb.jpg" alt="Image 2" style="width: 100%;height: auto;border-radius: 5px">
-    </a>
-    <a href="LINK3" target="_blank" style="flex: 1 1 calc(20% - 10px);max-width: calc(20% - 10px);text-align: center">
-        <img src="IMAGE3" alt="Image 3" style="width: 100%;height: auto;border-radius: 5px">
-    </a>
-    <a href="LINK4" target="_blank" style="flex: 1 1 calc(20% - 10px);max-width: calc(20% - 10px);text-align: center">
-        <img src="IMAGE4" alt="Image 4" style="width: 100%;height: auto;border-radius: 5px">
-    </a>
-    <a href="LINK5" target="_blank" style="flex: 1 1 calc(20% - 10px);max-width: calc(20% - 10px);text-align: center">
-        <img src="IMAGE5" alt="Image 5" style="width: 100%;height: auto;border-radius: 5px">
-    </a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malayalam Movie Subs</title>
+    <style>
+        /* Global font style */
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centered content */
+        .center-content {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Logo styling */
+        .center-content img {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Text styling */
+        .center-content h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Search bar styling */
+        #searchBarContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Wrapper for gallery */
+        .gallery-wrapper {
+            max-width: 1200px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+            padding: 20px; /* Add some padding around the gallery */
+        }
+
+        /* Image container styling */
+        #imageContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .imageLink img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Centered Section -->
+    <div class="center-content">
+        <img src="logo.png" alt="Logo">
+        <h1>Malayalam Movie Subs</h1>
+    </div>
+
+    <!-- Search Bar -->
+    <div id="searchBarContainer">
+        <input type="text" id="searchInput" placeholder="Search subtitles..." onkeyup="searchImages()">
+    </div>
+
+    <!-- Existing Image Gallery -->
+    <div class="gallery-wrapper">
+        <div id="imageContainer">
+            <a href="https://rb.gy/uayiqg" target="_blank" class="imageLink" data-name="Nadodikkattu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+                <img src="https://image.tmdb.org/t/p/original/ePuAtxBT6DDMHmk6eusFpIWi64A.jpg" alt="Nadodikkattu">
+            </a>
+            <a href="https://rb.gy/vtc1yd" target="_blank" class="imageLink" data-name="Thaniyavarthanam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+                <img src="https://i.ibb.co/9NvBJ9P/thumb.jpg" alt="Image 2">
+            </a>
+            <a href="LINK3" target="_blank" class="imageLink" data-name="Sadayam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+                <img src="https://a.ltrbxd.com/resized/film-poster/2/0/5/1/8/6/205186-sadayam-0-230-0-345-crop.jpg?v=48816097d0" alt="Image 3">
+            </a>
+            <a href="LINK4" target="_blank" class="imageLink" data-name="Namukku Parkkan Munthirithoppukal" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+                <img src="https://i.ibb.co/zJHw5Sn/NPMT-fotor-20240506133052.jpg" alt="Namukku Parkkan Munthirithoppukal">
+            </a>
+            <a href="LINK5" target="_blank" class="imageLink" data-name="Adaminte Vaariyellu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+                <img src="https://a.ltrbxd.com/resized/film-poster/2/5/7/6/5/2/257652-adaminte-vaariyellu-0-1000-0-1500-crop.jpg?v=a408810d1d" alt="Image 5">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function searchImages() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var links = document.getElementsByClassName('imageLink');
+            
+            for (var i = 0; i < links.length; i++) {
+                var imageName = links[i].getAttribute('data-name').toLowerCase();
+                if (imageName.indexOf(input) > -1) {
+                    links[i].style.display = 'block'; // Show the image link
+                } else {
+                    links[i].style.display = 'none'; // Hide the image link
+                }
+            }
+        }
+    </script>
+</body>
+</html>
