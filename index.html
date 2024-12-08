@@ -34,6 +34,12 @@
             margin: 0;
         }
 
+        /* Remove link styling (blue and underline) for the logo and heading */
+        .center-content a {
+            text-decoration: none;  /* Removes underline */
+            color: inherit;         /* Inherits the default text color */
+        }
+
         /* Search bar styling */
         #searchBarContainer {
             text-align: center;
@@ -72,10 +78,12 @@
     </style>
 </head>
 <body>
-    <!-- Centered Section -->
+    <!-- Centered Section for Logo and Title, wrapped in a link to index.html -->
     <div class="center-content">
-        <img src="logo.jpg" alt="Logo">
-        <h1>Malayalam Movie Subs</h1>
+        <a href="index.html">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Malayalam Movie Subs</h1>
+        </a>
     </div>
 
     <!-- Search Bar -->
@@ -86,19 +94,19 @@
     <!-- Existing Image Gallery -->
     <div class="gallery-wrapper">
         <div id="imageContainer">
-            <a href="nadodikkattu.html" target="_blank" class="imageLink" data-name="Nadodikkattu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="nadodikkattu.html" class="imageLink" data-name="Nadodikkattu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
                 <img src="https://image.tmdb.org/t/p/original/ePuAtxBT6DDMHmk6eusFpIWi64A.jpg" alt="Nadodikkattu">
             </a>
-            <a href="https://rb.gy/vtc1yd" target="_blank" class="imageLink" data-name="Thaniyavarthanam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="thaniyavarthanam.html" class="imageLink" data-name="Thaniyavarthanam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
                 <img src="https://i.ibb.co/9NvBJ9P/thumb.jpg" alt="Image 2">
             </a>
-            <a href="LINK3" target="_blank" class="imageLink" data-name="Sadayam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="Sadayam.html" class="imageLink" data-name="Sadayam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
                 <img src="https://a.ltrbxd.com/resized/film-poster/2/0/5/1/8/6/205186-sadayam-0-230-0-345-crop.jpg?v=48816097d0" alt="Image 3">
             </a>
-            <a href="LINK4" target="_blank" class="imageLink" data-name="Namukku Parkkan Munthirithoppukal" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="LINK4" class="imageLink" data-name="Namukku Parkkan Munthirithoppukal" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
                 <img src="https://i.ibb.co/zJHw5Sn/NPMT-fotor-20240506133052.jpg" alt="Namukku Parkkan Munthirithoppukal">
             </a>
-            <a href="LINK5" target="_blank" class="imageLink" data-name="Adaminte Vaariyellu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="LINK5" class="imageLink" data-name="Adaminte Vaariyellu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
                 <img src="https://a.ltrbxd.com/resized/film-poster/2/5/7/6/5/2/257652-adaminte-vaariyellu-0-1000-0-1500-crop.jpg?v=a408810d1d" alt="Image 5">
             </a>
         </div>
