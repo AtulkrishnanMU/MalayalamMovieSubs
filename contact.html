@@ -88,6 +88,50 @@
             color: #555;
             margin-top: 10px;
         }
+        /* Banner styling */
+        .banner img {
+            width: 100%;
+            height: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .banner-link {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.banner-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.banner-link:hover .banner-image {
+    filter: brightness(0%);
+}
+
+.banner-link:hover .banner-text {
+    opacity: 1;
+}
+
     </style>
 </head>
 <body>
@@ -98,7 +142,7 @@
             <h1>Malayalam Movie Subs</h1>
         </a>
     </div>
-
+    
     <!-- Contact Us Content -->
     <div class="content">
         <h2>Contact Us</h2>
@@ -110,6 +154,14 @@
             Email us at <a href="mailto:travisbickleis15482@gmail.com" class="email">travisbickleis15482@gmail.com</a> to get involved!
         </p>
     </div>
+
+<!-- Banner Section -->
+<div class="center-content banner">
+    <a href="https://discord.gg/j9nedTHgb2" target="_blank" class="banner-link">
+        <img src="https://i.ibb.co/ysnpXDf/discord2.jpg" alt="Join our Discord" class="banner-image">
+        <span class="banner-text">https://discord.gg/j9nedTHgb2 ↗</span>
+    </a>
+</div>
 
     <!-- Footer Section -->
     <footer class="footer">
