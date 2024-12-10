@@ -4,75 +4,66 @@
     <link rel="icon" href="https://i.ibb.co/gw4BhJF/logo.png" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Malayalam Movie Subs" />
-    <meta property="og:description" content="Malayalam Movie Subs is a non-profit initiative bringing the beauty of Malayalam cinema to a global audience by providing high-quality English subtitles for classic films." />
-    <meta property="og:image" content="https://i.ibb.co/gw4BhJF/logo.png" />
-    <meta property="og:url" content="https://atulkrishnanmu.github.io/MalayalamMovieSubs/" />
     <title>Malayalam Movie Subs</title>
     <style>
-        /* Global font style */
+        /* General Reset */
         body {
             font-family: 'Helvetica', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Centered content */
+        /* Centered Content Styling */
         .center-content {
             text-align: center;
             margin: 20px 0;
         }
 
-        /* Logo styling */
+        /* Logo and Heading */
         .center-content img {
             width: 100px;
             height: 100px;
             border-radius: 5px;
             object-fit: cover;
-            margin-bottom: 10px;
         }
 
-        /* Text styling */
         .center-content h1 {
             font-size: 24px;
-            font-weight: bold;
-            margin: 0;
+            margin: 10px 0;
         }
 
-        /* Remove link styling (blue and underline) for the logo and heading */
-        .center-content a {
-            text-decoration: none;  /* Removes underline */
-            color: inherit;         /* Inherits the default text color */
-        }
-
-        /* Search bar styling */
+        /* Search Bar */
         #searchBarContainer {
             text-align: center;
-            margin-bottom: 20px;
+            margin: 20px auto;
+            padding: 0 10px;
         }
 
         #searchInput {
             padding: 10px;
-            width: 80%;
-            max-width: 300px;
+            width: 100%;
+            max-width: 400px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
         }
 
-        /* Wrapper for gallery */
+        /* Gallery */
         .gallery-wrapper {
-            max-width: 1200px; /* Adjust the width as needed */
-            margin: 0 auto; /* Center the container horizontally */
-            padding: 20px; /* Add some padding around the gallery */
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 10px;
         }
 
-        /* Image container styling */
         #imageContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Default to 5 columns */
             gap: 10px;
+        }
+
+        .imageLink {
+            text-align: center;
         }
 
         .imageLink img {
@@ -80,17 +71,40 @@
             height: auto;
             border-radius: 5px;
         }
+                /* Footer styling */
+                .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer nav a {
+            margin: 0 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer nav a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
 
         /* Banner styling */
         .banner img {
             width: 100%;
             height: 100%;
-            max-width: 1200px;
+            max-width: 500px;
             border-radius: 5px;
             margin: 20px 0;
         }
-
-.banner-link {
+        .banner-link {
     text-decoration: none;
     color: white;
     position: relative;
@@ -113,7 +127,7 @@
     font-size: 20px;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px black;
     transition: opacity 0.3s ease;
     white-space: nowrap;
 }
@@ -126,90 +140,76 @@
     opacity: 1;
 }
 
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #imageContainer {
+                grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns for mobile */
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Centered Section for Logo and Title, wrapped in a link to index.html -->
+    <!-- Header -->
     <div class="center-content">
-        <a href="index.html">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
             <img src="logo.jpg" alt="Logo">
-            <h1>Malayalam Movie Subs</h1>
-        </a>
+            <h1 style="text-decoration: none; color: inherit;">Malayalam Movie Subs</h1>
+        </a> 
     </div>
-    
-<!-- Banner Section -->
-<div class="center-content banner">
-    <a href="https://discord.gg/j9nedTHgb2" target="_blank" class="banner-link">
-        <img src="https://i.ibb.co/7jy9q7t/discord.jpg" alt="Join our Discord" class="banner-image">
-        <span class="banner-text">https://discord.gg/j9nedTHgb2 ↗</span>
-    </a>
-</div>
-
 
     <!-- Search Bar -->
     <div id="searchBarContainer">
         <input type="text" id="searchInput" placeholder="Search subtitles..." onkeyup="searchImages()">
     </div>
 
-    <!-- Existing Image Gallery -->
+    <!-- Gallery -->
     <div class="gallery-wrapper">
         <div id="imageContainer">
-            <a href="nadodikkattu.html" class="imageLink" data-name="Nadodikkattu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="nadodikkattu.html" class="imageLink" data-name="Nadodikkattu">
                 <img src="https://image.tmdb.org/t/p/original/ePuAtxBT6DDMHmk6eusFpIWi64A.jpg" alt="Nadodikkattu">
             </a>
-            <a href="thaniyavarthanam.html" class="imageLink" data-name="Thaniyavarthanam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
-                <img src="https://i.ibb.co/9NvBJ9P/thumb.jpg" alt="Image 2">
+            <a href="thaniyavarthanam.html" class="imageLink" data-name="Thaniyavarthanam">
+                <img src="https://i.ibb.co/9NvBJ9P/thumb.jpg" alt="Thaniyavarthanam">
             </a>
-            <a href="Sadayam.html" class="imageLink" data-name="Sadayam" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
-                <img src="https://a.ltrbxd.com/resized/film-poster/2/0/5/1/8/6/205186-sadayam-0-230-0-345-crop.jpg?v=48816097d0" alt="Image 3">
+            <a href="Sadayam.html" class="imageLink" data-name="Sadayam">
+                <img src="https://a.ltrbxd.com/resized/film-poster/2/0/5/1/8/6/205186-sadayam-0-230-0-345-crop.jpg?v=48816097d0" alt="Sadayam">
             </a>
-            <a href="LINK4" class="imageLink" data-name="Namukku Parkkan Munthirithoppukal" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
+            <a href="LINK4" class="imageLink" data-name="Namukku Parkkan Munthirithoppukal">
                 <img src="https://i.ibb.co/zJHw5Sn/NPMT-fotor-20240506133052.jpg" alt="Namukku Parkkan Munthirithoppukal">
             </a>
-            <a href="LINK5" class="imageLink" data-name="Adaminte Vaariyellu" style="flex: 1 1 calc(20% - 10px); max-width: calc(20% - 10px); text-align: center;">
-                <img src="https://a.ltrbxd.com/resized/film-poster/2/5/7/6/5/2/257652-adaminte-vaariyellu-0-1000-0-1500-crop.jpg?v=a408810d1d" alt="Image 5">
+            <a href="LINK5" class="imageLink" data-name="Adaminte Vaariyellu">
+                <img src="https://a.ltrbxd.com/resized/film-poster/2/5/7/6/5/2/257652-adaminte-vaariyellu-0-1000-0-1500-crop.jpg?v=a408810d1d" alt="Adaminte Vaariyellu">
             </a>
         </div>
+    </div>
 
-        <!-- Subtitle Request Form Link -->
-         <br>
-        <div class="center-content">
-            <p style="font-size: 18px; margin: 10px 0;">Request a Malayalam Movie to be Subtitled:</p><br>
-            <a href="https://forms.gle/pXDnQXsC69iTQxyV8" target="_blank" style="padding: 10px 20px; background-color: black; color: white; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 5px; transition: background-color 0.3s ease;">
-                Submit a Request
-            </a>
+    <!-- Banner Section -->
+<div class="center-content banner">
+    <a href="https://discord.gg/j9nedTHgb2" target="_blank" class="banner-link">
+        <img src="https://i.ibb.co/HXKSw7X/discord2.jpg" alt="Join our Discord" class="banner-image">
+        <span class="banner-text">https://discord.gg/j9nedTHgb2 ↗</span>
+    </a>
 </div>
 
-<!-- Footer Section -->
-<footer style="background-color: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #ddd; margin-top: 40px;">
-    <nav>
-        <!--<div class="support-us">
-            <p>If you like our work, consider supporting us with a coffee!</p>
-            <a href="https://www.buymeacoffee.com/yourusername" target="_blank">
-                <img src="https://www.codehim.com/wp-content/uploads/2022/09/bmc-button.png" alt="Buy Me a Coffee" style="width: 160px; height: auto; margin-bottom: 10px;">
-            </a>
-        </div>-->
-        <a href="index.html" style="margin: 0 15px; color: #007bff; text-decoration: none; font-size: 16px;">Home</a>
-        <a href="about.html" style="margin: 0 15px; color: #007bff; text-decoration: none; font-size: 16px;">About</a>
-        <a href="contact.html" style="margin: 0 15px; color: #007bff; text-decoration: none; font-size: 16px;">Contact Us</a>
-    </nav>
-    <p style="font-size: 14px; color: #555; margin-top: 10px;">Malayalam Movie English Subtitles</p>
-</footer>
-
-    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <p>Malayalam Movie English Subtitles</p>
+    </footer>
 
     <script>
         function searchImages() {
             var input = document.getElementById('searchInput').value.toLowerCase();
             var links = document.getElementsByClassName('imageLink');
-            
+
             for (var i = 0; i < links.length; i++) {
                 var imageName = links[i].getAttribute('data-name').toLowerCase();
-                if (imageName.indexOf(input) > -1) {
-                    links[i].style.display = 'block'; // Show the image link
-                } else {
-                    links[i].style.display = 'none'; // Hide the image link
-                }
+                links[i].style.display = imageName.includes(input) ? 'block' : 'none';
             }
         }
     </script>
