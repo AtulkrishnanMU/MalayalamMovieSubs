@@ -6,18 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malayalam Movie Subs</title>
     <style>
-        .share-buttons {
-                margin-top: 20px;
-                text-align: center;
-            }
-            .share-buttons a {
-                margin: 0 10px;
-                padding: 10px 20px;
-                text-decoration: none;
-                color: white;
-                border-radius: 5px;
-                font-size: 16px;
-        }
         /* Global font style */
         body {
             font-family: 'Helvetica', Arial, sans-serif;
@@ -31,7 +19,6 @@
             margin: 20px 0;
         }
 
-        /* Logo styling */
         .center-content img {
             width: 100px;
             height: 100px;
@@ -40,13 +27,11 @@
             margin-bottom: 10px;
         }
 
-        /* Remove link styling (blue and underline) for the heading */
         .center-content a {
-            text-decoration: none;  /* Removes underline */
-            color: inherit;         /* Inherits the default text color */
+            text-decoration: none;
+            color: inherit;
         }
 
-        /* Text styling */
         .center-content h1 {
             font-size: 24px;
             font-weight: bold;
@@ -54,7 +39,7 @@
             cursor: pointer;
         }
 
-        /* Container styling */
+        /* Main container styling */
         .container {
             display: flex;
             background-color: #ffffff;
@@ -64,7 +49,6 @@
             max-width: 800px;
             margin: 40px auto;
             padding: 20px;
-            justify-content: center;
         }
 
         .image-container img {
@@ -75,6 +59,7 @@
 
         .content {
             padding: 20px;
+            flex: 1;
         }
 
         .title {
@@ -97,7 +82,6 @@
             margin-bottom: 20px;
         }
 
-        /* Button styling */
         .download-button {
             display: inline-block;
             padding: 10px 20px;
@@ -114,16 +98,18 @@
             background-color: #0056b3;
         }
 
-        /* Social media links */
         .social-links {
             margin-top: 20px;
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .social-links a {
             display: flex;
             align-items: center;
+            font-size: 14px;
+            color: #333;
         }
 
         .social-links img {
@@ -132,55 +118,88 @@
             margin-right: 5px;
         }
 
-        .social-links span {
+        .share-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .share-buttons img {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        footer nav a {
+            margin: 0 15px;
+            color: #007bff;
+            text-decoration: none;
             font-size: 16px;
-            color: #333;
         }
-        /* Banner styling */
-        .banner img {
-            width: 100%;
-            height: 100%;
-            max-width: 1200px;
-            border-radius: 5px;
-            margin: 20px 0;
+
+        footer p {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
         }
-        .banner-link {
-    text-decoration: none;
-    color: white;
-    position: relative;
-    display: inline-block;
-}
 
-.banner-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: filter 0.3s ease;
-}
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            padding: 10px;
+            align-items: center; /* Center-align everything in the container */
+        }
 
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
-}
+        .image-container {
+            display: flex;
+            justify-content: center; /* Center the image horizontally */
+            margin-bottom: 10px;
+        }
 
-.banner-link:hover .banner-image {
-    filter: brightness(0%);
-}
+        .image-container img {
+            width: 150px; /* Keep the smaller size */
+            height: auto;
+        }
 
-.banner-link:hover .banner-text {
-    opacity: 1;
-}
+        .content {
+            padding: 10px;
+            text-align: center; /* Center the text */
+        }
 
-    </style>
+        .title {
+            font-size: 20px;
+        }
+
+        .description, .genre {
+            font-size: 14px;
+        }
+
+        .download-button {
+            font-size: 14px;
+            padding: 8px 16px;
+            display: block;
+            margin: 10px auto; /* Center the button */
+        }
+
+        .social-links {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer nav a {
+            margin: 0 10px;
+            font-size: 14px;
+        }
+    }
+</style>
 </head>
 <body>
 
